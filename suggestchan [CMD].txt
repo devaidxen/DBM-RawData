@@ -1,0 +1,166 @@
+{
+  "name": "suggestchan",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "Nsqmc",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "MANAGE_CHANNELS",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "10",
+      "name": "Check Member Permissions"
+    },
+    {
+      "condition": "2",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "13",
+      "name": "Check Parameters"
+    },
+    {
+      "info": "4",
+      "infoIndex": "1",
+      "storage": "2",
+      "varName": "suggestionchannel",
+      "name": "Store Command Params"
+    },
+    {
+      "title": "Suggestion Channel Set",
+      "author": "",
+      "color": "ORANGE",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "2",
+      "varName": "suggestion.embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "2",
+      "varName": "suggestion.embed",
+      "message": "All suggestions for this server will now be sent to that channel for you to vote on and decide for your future updates. You may change the channel by using this command with a different mentioned channel.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "2",
+      "varName": "suggestion.embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "2",
+      "varName": "suggestionchannel",
+      "name": "Save Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "Missing Permissions",
+      "author": "",
+      "color": "ORANGE",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "missing.permissions",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "missing.permissions",
+      "message": "You are missing some permissions in order to set the suggestion channel to one of your channels!\n\nPlease make sure to have the `MANAGE_CHANNEL` permission to set the suggestion channel.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "missing.permissions",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "Incorrect Usage",
+      "author": "",
+      "color": "RED",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "incorrectusage.embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "incorrectusage.embed",
+      "message": "This is not how you use this command properly. Please make sure to mention a channel in order to set the suggestions channel to that.\n\n-suggestchan [#channel] >> Then it'll set suggestions to that channel.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "incorrectusage.embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}

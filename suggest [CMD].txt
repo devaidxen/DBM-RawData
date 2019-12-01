@@ -1,0 +1,192 @@
+{
+  "name": "suggest",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "beoew",
+  "actions": [
+    {
+      "condition": "0",
+      "comparison": "2",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "16",
+      "name": "Check Parameters"
+    },
+    {
+      "storage": "2",
+      "varName": "suggestionchannel",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "12",
+      "name": "Check Variable"
+    },
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "parameters",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "1",
+      "find": "${serverVars(\"suggestionchannel\")}",
+      "storage": "1",
+      "varName": "channel.send",
+      "name": "Find Channel"
+    },
+    {
+      "title": "New Suggestion",
+      "author": "",
+      "color": "BLUE",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "besentsuggest.embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "besentsuggest.embed",
+      "message": "New suggestion has arrived!\n\nSuggested by: ${member}\n\nSuggestion:\n${tempVars(\"parameters\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "besentsuggest.embed",
+      "message": "👍 - Agree | 👎 - Disagree",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "besentsuggest.embed",
+      "channel": "6",
+      "varName2": "suggestionchannel",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "besentsuggest.embed",
+      "emoji": "4",
+      "varName2": "👍",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "besentsuggest.embed",
+      "emoji": "4",
+      "varName2": "👎",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "Suggestions Not Setup",
+      "author": "",
+      "color": "ORANGE",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "notstup.embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "notstup.embed",
+      "message": "Sorry, but the suggestions system isn't set up in this server yet! In order to set it up, do the following:\n\n[p]suggestchan [#channel] >> Sets the suggestion channel.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "notstup.embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "Incorrect Usage",
+      "author": "",
+      "color": "RED",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "suggestion.incorrect./embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "suggestion.incorrect./embed",
+      "message": "Sorry, this is not how you use this command! In order to use this command correctly, please use the following usage:\n\n[p]suggest [suggestion] >> Sends the suggestion to the suggestion channel.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "suggestion.incorrect./embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
